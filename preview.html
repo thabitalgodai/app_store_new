@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>تفاصيل التطبيق - متجر التطبيقات</title>
+    <!-- Google Fonts و Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- ملف التنسيق المحسن -->
+    <link rel="stylesheet" href="css/preview.css">
+</head>
+<body>
+
+    <!-- التولبار العلوي -->
+    <div class="toolbar">
+        <i class="material-icons-round toolbar-icon" onclick="toggleShareMenu()">share</i>
+        <span class="page-title">تفاصيل التطبيق</span>
+        <i class="material-icons-round toolbar-icon" onclick="window.history.back()">arrow_back</i>
+
+        <!-- قائمة المشاركة -->
+        <div class="share-menu" id="shareMenu">
+            <div class="share-item" onclick="shareNative()">
+                <i class="material-icons-round" style="color:#5f6368;">share</i>
+                مشاركة
+            </div>
+            <div class="share-item" onclick="copyLink()">
+                <i class="material-icons-round" style="color:#5f6368;">link</i>
+                نسخ الرابط
+            </div>
+            <div class="share-item" onclick="shareViaWhatsApp()">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" width="20" alt="واتساب">
+                واتساب
+            </div>
+        </div>
+    </div>
+
+    <!-- رأس التطبيق -->
+    <div class="app-header">
+        <img id="appIcon" class="app-icon" src="default-icon.png" alt="أيقونة التطبيق">
+        <div class="header-info">
+            <h1 class="app-title" id="appTitle">جاري التحميل...</h1>
+            <div class="developer" id="developer">
+                <i class="material-icons-round" style="font-size:16px;">verified</i> مطور التطبيق
+            </div>
+            <div class="rating-container">
+                <div class="rating-stars" id="ratingStars"></div>
+                <span class="rating-text" id="ratingText"></span>
+            </div>
+            <button class="install-btn" id="installBtn">
+                <i class="material-icons-round">get_app</i>
+                <span>تثبيت</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- لقطات الشاشة -->
+    <div class="screenshots-container">
+        <h2 class="section-title">
+            <i class="material-icons-round" style="color:#1a73e8;">photo_library</i>
+            لقطات الشاشة
+        </h2>
+        <div class="screenshots-scroll" id="screenshots"></div>
+    </div>
+
+    <!-- الوصف -->
+    <!-- الوصف مع إمكانية الطي -->
+<div class="description-section">
+    <div class="description-header" id="toggleDescriptionBtn">
+        <h2 class="section-title">
+            <i class="material-icons-round" style="color:#1a73e8;">description</i>
+            حول هذا التطبيق
+        </h2>
+        <i class="material-icons-round toggle-icon" id="toggleIcon">expand_more</i>
+    </div>
+    <div class="description-text" id="description"></div>
+</div>
+
+    <!-- المعلومات الإضافية -->
+    <div class="details-grid" id="detailsGrid"></div>
+
+    <!-- Firebase (غير مطلوب لهذه الصفحة، لكن يمكن إضافته إذا أردت) -->
+    <script src="js/preview.js"></script>
+</body>
+</html>

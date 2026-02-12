@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر التطبيقات الاحترافي</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- شاشة انتظار تحميل البيانات -->
+    <div id="loadingOverlay">
+        <div class="shimmer-loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- التولبار -->
+    <div class="toolbar">
+        <i class="material-icons-round toolbar-icon" onclick="history.back()">arrow_back</i>
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="ابحث عن تطبيق...">
+            <i class="material-icons-round" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: #5f6368;">search</i>
+        </div>
+        <i class="material-icons-round toolbar-icon" onclick="toggleMenu()">menu</i>
+    </div>
+
+    <!-- شريط الأخبار المتحرك -->
+    <div class="news-ticker">
+        <div class="marquee-content">
+            <span>مرحباً بك في متجر التطبيقات الاحترافي</span>
+            <span>📱 تطبيقات مجانية مفتوحة المصدر</span>
+            <span>🛡️ آمن ومضمون 100%</span>
+            <span>مرحباً بك في متجر التطبيقات | تصميم وبرمجه ثابت الذعمري ت/736091318/771846811!</span>
+        </div>
+    </div>
+
+    <!-- قائمة التطبيقات -->
+    <div class="apps-container">
+        <div class="apps-grid" id="appsGrid"></div>
+    </div>
+
+    <!-- القائمة الجانبية - بدون ملف شخصي وبدون أزرار غير مرغوب فيها -->
+    <div class="side-menu" id="sideMenu">
+        <!-- الصفحة الرئيسية -->
+        <div class="menu-item">
+            <i class="material-icons-round" style="color: #0072C6;" onclick="toggleMenu()">home</i>
+            <span>الصفحة الرئيسية</span>
+        </div>
+
+        <!-- أرسل رسالة SMS -->
+        <div class="menu-item" onclick="window.open('sms:96736091318', '_blank')">
+            <i class="material-icons-round" style="color: #0072C6;">sms</i>
+            <span>أرسل رسالة SMS</span>
+        </div>
+
+        <!-- تواصل عبر واتساب -->
+        <div class="menu-item" onclick="window.open('https://wa.me/96736091318', '_blank')">
+            <i class="material-icons-round" style="color: #0072C6;">chat</i>
+            <span>تواصل عبر واتساب</span>
+        </div>
+
+        <!-- تواصل عبر تيليجرام -->
+        <div class="menu-item" onclick="window.open('https://t.me/thabitalgodai', '_blank')">
+            <i class="material-icons-round" style="color: #0072C6;">send</i>
+            <span>تواصل عبر تيليجرام</span>
+        </div>
+
+        <!-- راسلنا عبر الإيميل -->
+        <div class="menu-item" onclick="window.open('mailto:sabet122x@gmail.com', '_blank')">
+            <i class="material-icons-round" style="color: #0072C6;">email</i>
+            <span>راسلنا عبر الإيميل</span>
+        </div>
+    </div>
+
+    <!-- Firebase - فقط المكتبات الضرورية -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
